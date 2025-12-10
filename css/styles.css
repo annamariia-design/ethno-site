@@ -1,0 +1,154 @@
+/* ===== ETHNO ECO STYLE CSS ===== */
+
+:root{ --linen:#f3efe4; --brown:#5a4633; --accent:#b18a5e; --dark:#2d241c; --radius:12px; --font-main:'Montserrat', sans-serif; --font-title:'Playfair Display', serif; }
+
+body{ margin:0; font-family:var(--font-main); background:var(--linen); color:var(--brown); }
+
+/* HEADER */ .header{ background:var(--linen); border-bottom:2px solid var(--accent); padding:15px 0; } .container{ width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center; } .logo{ width:60px; }
+
+/* NAVIGATION */ .nav a{ text-decoration:none; color:var(--dark); margin:0 10px; font-weight:600; } .nav a:hover{ color:var(--accent); }
+
+/* HERO */ .hero{ text-align:center; padding:80px 20px; background:url('../img/background.jpg') center/cover no-repeat; color:var(--dark); } .hero h1{ font-family:var(--font-title); font-size:48px; margin-bottom:10px; }
+
+/* PAGE CONTENT */ .page{ width:80%; margin:50px auto; line-height:1.7; font-size:20px; } .page h2{ font-family:var(--font-title); font-size:36px; color:var(--dark); margin-bottom:20px; }
+
+/* ACCORDION */ .accordion details{ background:white; padding:15px; margin:10px 0; border-radius:var(--radius); border:1px solid var(--accent); cursor:pointer; } .accordion summary{ font-weight:700; font-size:20px; } .accordion p{margin-top:10px;}
+
+/* FOOTER */ .footer{ text-align:center; padding:20px; background:var(--accent); color:white; margin-top:50px; }
+*{
+    transition: .3s ease;
+}
+
+/* Навігація оживе */
+.nav a:hover{
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+/* Елегантна поява сторінок */
+.hero, .page, .accordion{
+    animation: fadeIn .8s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeIn{
+    to{opacity:1;}
+}
+/* ===== Gallery Slider ===== */
+.slider{
+    width:70%;
+    margin:30px auto;
+}
+.slider img{
+    width:100%;
+    border-radius:15px;
+}
+.slick-dots li button:before{
+    color:var(--accent);
+}
+.slick-prev:before, .slick-next:before{
+    color:var(--accent);
+}
+/* ===== BEAUTY BURGER MENU ETHNO STYLE ===== */
+
+.header .container{
+    position:relative;
+}
+
+/* Бургер */
+.burger{
+    font-size:32px;
+    cursor:pointer;
+    color:var(--dark);
+    padding:8px 12px;
+    border-radius:8px;
+    transition:.3s;
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.burger:hover{
+    background:rgba(0,0,0,0.05);
+}
+
+/* Меню */
+.nav .menu{
+    display:none;
+    flex-direction:column;
+    background:var(--linen);
+    border:2px solid var(--accent);
+    padding:25px;
+    position:absolute;
+    top:75px;
+    right:0;
+    width:260px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    z-index:1000;
+
+    /* анімація */
+    opacity:0;
+    transform:translateY(-15px);
+    transition:.35s ease;
+}
+
+.nav .menu a{
+    display:block;
+    margin:12px 0;
+    font-size:20px;
+    font-weight:600;
+    color:var(--dark);
+    transition:.2s;
+}
+
+/* ефект наведення */
+.nav .menu a:hover{
+    color:var(--accent);
+    transform:translateX(5px);
+}
+
+/* Відкриття */
+.menu.open{
+    display:flex !important;
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===== B U R G E R  →  X ===== */
+.burger.open{
+    transform:translateY(-50%) rotate(90deg);
+}
+/* ===== QUOTE WIDGET ===== */
+.quote-section{
+    text-align:center;
+    width:80%;
+    margin:50px auto;
+}
+
+.quote-section h2{
+    font-family:var(--font-title);
+    color:var(--dark);
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+#quoteBox{
+    background:white;
+    border:2px solid var(--accent);
+    padding:20px;
+    border-radius:14px;
+    font-size:20px;
+    line-height:1.5;
+    width:80%;
+    max-width:650px;
+    margin:auto;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+#quoteBox:hover{
+    transform:scale(1.03);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+

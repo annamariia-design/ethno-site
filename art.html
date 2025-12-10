@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мистецтво України</title>
+
+    <!-- Підключення основних стилів -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Slick styles -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <link rel="icon" href="img/logo.svg">
+</head>
+<body>
+
+<!-- ==== HEADER ==== -->
+<header class="header">
+<div class="container">
+<img src="img/logo.svg" alt="logo" class="logo">
+
+<nav class="nav">
+    <div class="burger">&#9776;</div>
+    <div class="menu">
+        <a href="index.html">Головна</a>
+        <a href="about.html">Про культуру</a>
+        <a href="traditions.html">Традиції</a>
+        <a href="art.html">Мистецтво</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="about-me.html">Про мене</a>
+    </div>
+</nav>
+
+</div>
+</header>
+
+<script>
+const burger=document.querySelector('.burger');
+const menu=document.querySelector('.menu');
+burger.onclick=()=>{ menu.classList.toggle('open'); };
+</script>
+
+
+<!-- MAIN CONTENT -->
+<main class="page">
+    <h2>Українське мистецтво</h2>
+
+    <p>
+        Українське мистецтво — це пласт української культури, пов'язаний з відтворенням світосприйняття українського народу, його психології, етичних настанов і естетичних прагнень, що охоплює всі види народної творчості, традиційно притаманні Україні: музику, танці, пісні, фольклор, декоративно-ужиткове мистецтво, що розвиваються, як єдиний комплекс, і органічно входять у життя народу протягом усієї його історії. Українське мистецтво має глибоке коріння, що сягає часів Київської Русі, коли розвивався іконопис та монументальний живопис храмів. Згодом у період козацької держави з’явилося бароко з пишним декором та християнськими сюжетами. У XIX столітті мистецтво звернулося до народних традицій і побуту, що відобразилося у живописі й декоративному мистецтві. На початку ХХ століття українські митці стали частиною світового авангарду, створюючи новаторські форми та ідеї. Сьогодні українське мистецтво поєднує історичну спадщину з сучасними течіями, зберігаючи національну самобутність і розвиваючись у світовому культурному просторі. Нижче представлена галерея робіт, 
+        що відображає різні культурні напрямки.
+    </p>
+
+    <!-- СЛАЙДЕР ГАЛЕРЕЇ -->
+    <div class="slider">
+        <div><img src="photo/art/1.jpg" alt="art1"></div>
+        <div><img src="photo/art/2.jpg" alt="art2"></div>
+        <div><img src="photo/art/3.jpg" alt="art3"></div>
+        <div><img src="photo/art/4.jpg" alt="art4"></div>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    © 2025 Шумило Анна-Марія
+</footer>
+
+<!-- JS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.slider').slick({
+        autoplay:true,
+        dots:true,
+        arrows:true,
+        autoplaySpeed:2000,
+        speed:600
+    });
+});
+</script>
+
+</body>
+</html>
